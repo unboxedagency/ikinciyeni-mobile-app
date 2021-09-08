@@ -97,7 +97,8 @@ ToDo
 Bundle carArray = new Bundle()
 	//The car details
 	carArray.putDouble(Param.PRICE, price); // The valuation price, or 0 if Fail
-	carArray.putString(Param.ITEM_ID, item_id);
+	carArray.putString(Param.ITEM_ID, item_id); //
+	carArray.putString(Param.ITEM_NAME, item_name); // A distinct car name, for example 'Peugeot 3008 1.6 Bluehdi 120 Active A/t Skypack S&s 2018' (Brand + Model + Package + Year)
 	carArray.putString(Param.ITEM_BRAND, item_brand); // The car brand, for example 'Renault'
 	carArray.putString(Param.ITEM_CATEGORY, item_category); // The car model, for example 'Clio'
 	carArray.putString(Param.ITEM_CATEGORY2, item_category2); // The car body type, for example 'Sedan'
