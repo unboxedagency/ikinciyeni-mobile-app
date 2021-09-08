@@ -22,7 +22,7 @@ Analytics.logEvent(AnalyticsEventLogin, parameters: [
 -- WE DO NOT TRACK THE EVENT --
 ```
 
-### Sign up Event
+### Sign up Event (Membership)
 
 ***// Android***
 ```
@@ -49,6 +49,29 @@ NSDictionary *params = @{
 	parameters:params
 ];
 ```
+
+### Tutorial Begin Event
+
+***// Android***
+```
+Bundle params = new Bundle()
+	
+	firebaseAnalytics.logEvent(Event.TUTORIAL_BEGIN, null);
+```
+
+***// iOS***
+```
+Analytics.logEvent(AnalyticsEventTutorialBegin, parameters: [
+	null!
+])
+```
+
+***// Facebook***
+```
+ToDo
+```
+
+
 
 
 
