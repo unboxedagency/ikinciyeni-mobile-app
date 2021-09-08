@@ -96,27 +96,27 @@ ToDo
 ```
 Bundle carArray = new Bundle()
 	//The car details
-	carArray.putDouble(Param.PRICE, price);
+	carArray.putDouble(Param.PRICE, price); // The valuation price, or 0 if Fail
 	carArray.putString(Param.ITEM_ID, item_id);
-	carArray.putString(Param.ITEM_BRAND, item_brand);
-	carArray.putString(Param.ITEM_CATEGORY, item_category);
-	carArray.putString(Param.ITEM_CATEGORY2, item_category2);
-	carArray.putString(Param.ITEM_CATEGORY3, item_category3);
-	carArray.putString(Param.ITEM_CATEGORY4, item_category4);
-	carArray.putString(Param.ITEM_CATEGORY5, item_category5);
-	carArray.putString(Param.ITEM_VARIANT, item_variatn);
+	carArray.putString(Param.ITEM_BRAND, item_brand); // The car brand, for example 'Renault'
+	carArray.putString(Param.ITEM_CATEGORY, item_category); // The car model, for example 'Clio'
+	carArray.putString(Param.ITEM_CATEGORY2, item_category2); // The car body type, for example 'Sedan'
+	carArray.putString(Param.ITEM_CATEGORY3, item_category3); // The car year, for example '2011'
+	carArray.putString(Param.ITEM_CATEGORY4, item_category4); // The car trnsmission, for example 'Otomatik'
+	carArray.putString(Param.ITEM_CATEGORY5, item_category5); // The car fule, for example 'Benzin'
+	carArray.putString(Param.ITEM_VARIANT, item_variant); // TBD
 	
 Bundle params = new Bundle()
 	params.putParcelableArray(Param.ITEMS, new Bundle[] {carArray});
-	params.putString('cp_carwizz_step', cp_carwizz_step);
-	params.putString('cp_car_package', cp_car_package);
-	params.putInteger('cp_car_horse_power', cp_car_horse_power);
-	params.putInteger('cp_car_mileage', cp_car_mileage);
+	params.putString('cp_carwizz_step', cp_carwizz_step); // The incremetal step, for example, 1, 2, 3... (777 for Success, 999 for Fail)
+	params.putString('cp_car_package', cp_car_package); // The car package, for example '30 Tfsi 116 Hp Dynamic Str Sback Pi+ Prestige Paket'
+	params.putInteger('cp_car_horse_power', cp_car_horse_power); // The car horse poer, for example '150'
+	params.putInteger('cp_car_mileage', cp_car_mileage); // The car mileage, for example '25000'
 	params.putInteger('cp_car_damage_report', cp_car_damage_report);
 	params.putInteger('cp_car_equipment', cp_car_equipment);
-	params.putInteger(Param.SUCCESS);
-	params.putString(Param.CURRENCY, currency);
-	params.putDouble(Param.VALUE, value);
+	params.putInteger(Param.SUCCESS); // The Carwizz Valuation reuslt, for example 1 for Success, 0 for Fail
+	params.putString(Param.CURRENCY, currency); // 'TRY'
+	params.putDouble(Param.VALUE, value); // The valuation estimate, for example '150000' (or 0 for Fail)
 	
 	firebaseAnalytics.logEvent('carwizz', params);
 ```
