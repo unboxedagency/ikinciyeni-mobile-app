@@ -1,3 +1,9 @@
+## Setup reference (pods/dependencies)
+
+Latest Android versions: https://firebase.google.com/docs/android/setup
+
+Latest iOS versions: https://firebase.google.com/docs/ios/setup
+
 ## Automatically collected events
 
 https://support.google.com/firebase/answer/9234069?hl=en&ref_topic=6317484
